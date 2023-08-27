@@ -40,11 +40,7 @@ const MORSE_TABLE = {
 function decode(expr) {
     // write your solution here
     let result = '' ;
-    
     let midResult = expr.match(/.{1,10}/g);
-
-    
-
 
     midResult.forEach(element => {
         if (element === '**********') {
@@ -59,24 +55,13 @@ function decode(expr) {
                     newStr += '-';
                 } 
             } )
-            result += MORSE_TABLE[newStr]
-        }
-        //result += MORSE_TABLE[newStr];
+            result += MORSE_TABLE[newStr];
+        }   
     });
 
-
-    
-
     return result;
-
-    //const mid2 = midResult.match(/.{1,2}/g);
-
-    
-    //console.log(midResult[3]);
-
 }
-console.log(decode("00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010"))
 
-/*module.exports = {
+module.exports = {
     decode
-}*/
+}
